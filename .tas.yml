@@ -1,14 +1,16 @@
+---
 framework: jest     
 preRun:
   command:
     - yarn install          
 postMerge:
-    - "./app/**/*.spec.ts"
+  pattern: 
     - "./app/**/*.test.ts"
+    - "./app/**/*.spec.ts"
 preMerge:
   pattern:
-    - "./app/**/*.spec.ts"
     - "./app/**/*.test.ts"
+    - "./app/**/*.spec.ts"
 postRun:
   command:
     - yarn --version
